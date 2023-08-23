@@ -1,0 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Null : MonoBehaviour
+{
+    void Start()
+    {
+        int a = 5;
+        int b = 3;
+        int c = 4;
+        int d = 5;
+
+        // null
+        string str = null;
+
+        str = ""; // 빈 문자열
+        Debug.Log(str);
+
+        str = null; // null로 서로 다르다
+        Debug.Log(str);
+
+        // ??
+        string str2 = "abc";
+        string str3 = str ?? str2; // 좌측의 값이 null이 아니면 좌측 null이면 우측의 값이 출력된다.
+        Debug.Log(str3);
+
+        // ??=
+        str ??= str2; // 변수가 null이 아니면 대입하지 않고 null이면 값을 대입한다.
+        Debug.Log(str);
+    }
+}
