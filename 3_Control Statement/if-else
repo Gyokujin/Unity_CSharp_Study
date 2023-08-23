@@ -1,0 +1,29 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class if_else : MonoBehaviour
+{
+    void Start()
+    {
+        int age = 36;
+
+        // if
+        if (age < 20)
+        {
+            Debug.Log("애기");
+        }
+        else if (age < 30)
+        {
+            Debug.Log("청년");
+        }
+        else if (age < 35)
+        {
+            Debug.Log("아재");
+        }
+        else
+        {
+            Debug.Log("산악회 회원");
+        }
+    }
+}
