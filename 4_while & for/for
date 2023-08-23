@@ -1,0 +1,27 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class For : MonoBehaviour
+{
+    void Start()
+    {
+        // for (초기화; 반복 조건; 반복 명령어)
+        for (int i = 0; i < 10; i++)
+        {
+            Debug.Log(i);
+        }
+
+        for (int j = 0; j < 10; j++)
+        {
+            string stars = "";
+
+            for (int k = 0; k < j; k++)
+            {
+                stars += "*";
+            }
+
+            Debug.Log(stars);
+        }
+    }
+}
