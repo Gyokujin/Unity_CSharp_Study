@@ -1,0 +1,27 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Switch : MonoBehaviour
+{
+    void Start()
+    {
+        string groupName = "트와이스";
+
+        switch (groupName)
+        {
+            case "르세라핌":
+                Debug.Log("르세라핌? 멤버들이 매력적이야!");
+                break;
+            case "뉴진스":
+                Debug.Log("뉴진스는 노래가 좋아");
+                break;
+            case "카라":
+                Debug.Log("이번에 컴백했잖아!");
+                break;
+            default:
+                Debug.Log(groupName + "...저는 누군지 잘 모릅니다만, 응원합니다!");
+                break;
+        }
+    }
+}
