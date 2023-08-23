@@ -1,0 +1,54 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class While : MonoBehaviour
+{
+    void Start()
+    {
+        int i = 0;
+
+        // while
+        while (i < 10)
+        {
+            Debug.Log(i);
+            i += 2;
+        }
+
+        float thickness = 0.0001f;
+        int count = 0;
+
+        while (thickness <= 1)
+        {
+            count++;
+            thickness *= 2;
+        }
+
+        Debug.Log(count + "번 접었습니다.");
+
+        i = 100;
+
+        // do while
+        do
+        {
+            Debug.Log(i);
+        } while (i < 10); // while 조건에 관계없이 do를 한 번 실행한다.
+
+        thickness = 0.0001f;
+        count = 0;
+
+        // break & continue
+        while (true)
+        {
+            count++;
+            thickness *= 2;
+
+            if (thickness > 0.5f)
+                break;
+            else if (count == 5)
+                continue;
+
+            Debug.Log(count + "번 접었습니다.");
+        }
+    }
+}
