@@ -1,0 +1,24 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class LogicalOperator : MonoBehaviour
+{
+    void Start()
+    {
+        int a = 5;
+        int b = 3;
+        int c = 4;
+        int d = 5;
+
+        // or (하나 이상 참이라면 true)
+        Debug.Log(a < b || c < d);
+
+        // and (모든 경우가 참이라면 true)
+        Debug.Log(a < b && c < d);
+
+        // not (참을 거짓 거짓을 참으로)
+        Debug.Log(!(a < b) && c < d);
+        Debug.Log(!(a + b > c) && a + b > b);
+    }
+}
