@@ -1,0 +1,44 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class VariableDataType : MonoBehaviour
+{
+    void Start()
+    {
+        // int (정수, 10자리 정수, -21억 ~ 21억)
+        int x; // 기본값은 0
+        int y;
+
+        x = 1;
+        y = 2;
+
+        Debug.Log(x + y);
+
+        // long (큰 정수, 18자리 정수)
+        long a = 123456789012345;
+        long b = 2345678901;
+
+        Debug.Log(a + b);
+        Debug.Log(a * b); // long 값의 영역을 초과하기 때문에 오류가 나타난다.
+
+        // float (소수, 7자리 소수)
+        float c = 12345678901234567;
+        float d = 12345.56677889f;
+        float e = 12345678900000000;
+
+        Debug.Log(c + d); // float 값의 영역을 초과하기 때문에 오류가 나타난다.
+        Debug.Log((c == e).ToString()); // 7자리까지만 정확히 계산하기 때문에 이후의 값이 달라도 같다고 표현한다.
+
+        // bool (참과 거짓)
+        bool f = (c == d); // 기본값은 false
+
+        Debug.Log(f);
+
+        // string (문자열)
+        string s = "abcdefg"; // 기본값은 "". 빈 문자열이다.
+        string t = "hijkl";
+
+        Debug.Log(s + t);
+    }
+}
