@@ -1,0 +1,26 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ArithmeticOperatior : MonoBehaviour
+{
+    // 사칙 연산자
+    void Start()
+    {
+        int a = 5;
+        int b = 3;
+
+        Debug.Log(a + b);
+        Debug.Log(a - b);
+        Debug.Log(a * b);
+        Debug.Log(a / b); // 몫
+        Debug.Log(a % b); // 나머지
+
+        Debug.Log(5f / 3); // 연산중 하나라도 소수라면 결과 또한 소수가 된다.
+
+        Debug.Log(5.0 / 2); // f가 없기 때문에 자료형은 double이 된다.
+        Debug.Log(5.0f / 2);
+
+        Debug.Log(2 + 2 * 2);
+    }
+}
