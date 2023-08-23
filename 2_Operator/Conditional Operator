@@ -1,0 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ConditionalOperator : MonoBehaviour
+{
+    void Start()
+    {
+        int a = 5;
+        int b = 3;
+        int c = 4;
+
+        // 삼항 연산자
+        a = b > c ? 1 : 2; // 조건이 참이라면 앞의 값 거짓이면 뒤의 값을 대입한다.
+
+        Debug.Log(a);
+    }
+}
