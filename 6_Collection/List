@@ -1,0 +1,51 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class List : MonoBehaviour
+{
+    void Start()
+    {
+        // List
+        List<string> names = new List<string>();
+
+        names.Add("James"); // 0번 자리부터 순차적으로 값을 추가한다
+        names.Add("Ari");
+
+        Debug.Log(names[0]);
+        Debug.Log(names[1]);
+
+        names.Insert(0, "Josh"); // 기존에 있던 자리에 값을 추가하면 이후의 값은 뒤로 밀려나게 된다
+
+        Debug.Log(names[0]);
+        Debug.Log(names[1]);
+        Debug.Log(names[2]);
+
+        names.RemoveAt(1); // 자리에 있는 값을 제거. Insert와 반대로 이후의 값이 당겨지게 된다
+        Debug.Log(names[1]);
+
+        names.Remove("Josh"); // 같은 값의 자리를 찾아 제거
+        Debug.Log(names[0]);
+
+        names.Add("Phoenix");
+        names.Add("Apollo");
+
+        for (int i = 0; i < names.Count; i++) // List는 Count로 크기를 구한다.
+        {
+            Debug.Log("names[" + i + "] = " + names[i]);
+        }
+
+        Debug.Log(names.Contains("Phoenix")); // List가 값을 포함하고 있는지 확인 가능하다.
+        Debug.Log(names.Contains("Arthas"));
+
+        Debug.Log("Apollo는 " + names.IndexOf("Apollo") + "번 자리에 있다."); // IndexOf로 몇 번째 자리에 있는지 확인 가능하다.
+        Debug.Log(names.IndexOf("Arthas")); // 포함하고 있지 않은 값은 -1을 출력한다.
+
+        names.Clear(); // 모든 값을 지운다. Count 또한 0이 된다.
+
+        for (int i = 0; i < names.Count; i++) // List는 Count로 크기를 구한다.
+        {
+            Debug.Log("names[" + i + "] = " + names[i]);
+        }
+    }
+}
