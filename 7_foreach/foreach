@@ -1,0 +1,67 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Foreach : MonoBehaviour
+{
+    void Start()
+    {
+        // foreach
+        int[] a = { 2, 4, 6, 8, 10 };
+
+        foreach (int number in a) // 배열의 모든 요소를 순차적으로 반복한다.
+        {
+            Debug.Log(number);
+        }
+
+        int[,] b = {
+            { 2, 4, 6, 8, 10 },
+            { 3, 6, 9, 12, 15 },
+            { 4, 8, 12, 16, 20}
+        };
+
+        foreach (int number in b)
+        {
+            Debug.Log(number);
+        }
+
+        int[][] c = new int[3][];
+        c[0] = new int[5] { 2, 3, 4, 5, 8 };
+        c[1] = new int[2] { 4, 17 };
+        c[2] = new int[4] { 10, 8, 5, 4 };
+
+        foreach (int[] array in c)
+        {
+            foreach (int number in array)
+            {
+                Debug.Log(number);
+            }
+        }
+
+        List<string> names = new List<string>();
+        names.Add("젤다");
+        names.Add("링크");
+        names.Add("가논");
+
+        foreach (string name in names)
+        {
+            Debug.Log(name);
+        }
+
+        Dictionary<string, int> points = new Dictionary<string, int>();
+        points.Add("Slime", 5);
+        points.Add("Goblin", 8);
+        points.Add("Troll", 15);
+        points.Add("Dragon", 100);
+
+        foreach (KeyValuePair<string, int> pair in points) // KeyValuePair에 Dictionary와 똑같이 Key, Value를 대입한다.
+        {
+            Debug.Log(pair.Key + ": " + pair.Value);
+        }
+
+        foreach (string key in points.Keys)
+        {
+            Debug.Log(key + ": " + points[key]);
+        }
+    }
+}
