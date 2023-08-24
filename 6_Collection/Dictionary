@@ -1,0 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Dictionary : MonoBehaviour
+{
+    void Start()
+    {
+        // Dictionary
+        Dictionary<string, string> cities = new Dictionary<string, string>(); // Key와 Value를 갖는다. 각 Key마다 값인 Value를 가지게 된다.
+
+        cities.Add("한국", "서울");
+        cities.Add("미국", "워싱턴");
+        cities.Add("일본", "도쿄");
+        cities.Add("프랑스", "파리");
+
+        Debug.Log(cities["한국"]);
+        Debug.Log(cities["프랑스"]);
+
+        cities["일본"] = "오사카"; // 하나의 Key에는 하나의 Value만 가진다.
+        Debug.Log(cities["일본"]);
+
+        Debug.Log(cities.ContainsKey("브라질")); // Dictionary가 해당 Key를 가지고 있는지 확인한다.
+        Debug.Log(cities.ContainsValue("오사카")); // Dictionary가 해당 Value를 가지고 있는지 확인한다.
+
+        cities.Remove("미국");
+        Debug.Log(cities.ContainsKey("미국"));
+
+        cities.Clear(); // 모든 값을 지운다. Count 또한 0이 된다.
+        Debug.Log(cities.Count);
+    }
+}
