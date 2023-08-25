@@ -1,0 +1,22 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Inheritance : Character // 상속. 즉 확장과 같다.
+{
+    public int mp;
+
+    public void AddMP(int mp) // 부모 클래스 Character에서 함수를 더 추가하여 기능으로써 확장이 가능하다.
+    {
+        this.mp = mp; // this는 전역변수를 없다면 지역변수를 의미한다.
+    }
+
+    public void UseMagic()
+    {
+        if (mp >= 5)
+        {
+            mp -= 5;
+            Debug.Log("FIRE BALL!!");
+        }
+    }
+}
