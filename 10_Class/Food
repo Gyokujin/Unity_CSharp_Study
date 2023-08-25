@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Food : MonoBehaviour
 {
-
     public string name;
     public int recovery;
 
