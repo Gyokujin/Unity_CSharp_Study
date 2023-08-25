@@ -1,0 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Class : MonoBehaviour
+{
+    void Start()
+    {
+        Character cha = new Character("Eva", 100);
+        Food pizza = new Food("pizza", 30);
+
+        Debug.Log("이름 : " + cha.name);
+
+        cha.Hit(45);
+        Debug.Log(cha.hp);
+
+        cha.Heal(10);
+        Debug.Log(cha.hp);
+        Debug.Log("Is Alive? " + cha.IsAlive());
+
+        cha.Eat(pizza);
+
+        cha.Hit(70);
+        Debug.Log(cha.hp);
+        Debug.Log("Is Alive? " + cha.IsAlive());
+
+        cha.Hit(30);
+        cha.Eat(pizza);
+        Debug.Log(cha.hp);
+        Debug.Log("Is Alive? " + cha.IsAlive());
+    }
+}
