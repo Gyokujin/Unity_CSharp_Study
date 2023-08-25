@@ -1,0 +1,43 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Character : MonoBehaviour
+{
+    public string name;
+    public int hp;
+
+    public Character() // 생성자를 선언하지 않은 상태에서 상속되면 이와 같은 기본 생성자가 생성된다.
+    {
+
+    }
+
+    public Character(string characterName, int initialHP) // 생성자. 클래스의 이름과 같으면 실행되는 함수
+    {
+        name = characterName;
+        hp = initialHP;
+    }
+
+    public void Hit(int damage)
+    {
+        hp -= damage;
+    }
+
+    public void Heal(int heal)
+    {
+        hp += heal;
+    }
+
+    public bool IsAlive()
+    {
+        return hp > 0; // 조건의 결과를 return 가능하다.
+    }
+
+    public void Eat(Food food)
+    {
+        if (IsAlive())
+        {
+            hp += food.recovery;
+        }
+    }
+}
