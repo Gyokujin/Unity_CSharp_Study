@@ -1,0 +1,36 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Struct : MonoBehaviour
+{
+    // struct
+    struct HumanData // 구조체 내의 값은 여러 자료형을 사용 가능하다.
+    {
+        public string name;
+        public float weight;
+        public float height;
+        public int feetSize;
+    }
+
+    void Start()
+    {
+        HumanData Player1 = new HumanData();
+        Player1.name = "Nero";
+        Player1.weight = 82;
+        Player1.height = 182;
+        Player1.feetSize = 280;
+
+        Debug.Log(Player1.name);
+
+        HumanData[] players = new HumanData[3];
+        players[0].name = "Vergil";
+        players[1].name = "V";
+        players[2].name = "Dante";
+
+        for (int i = 0; i < players.Length; i++)
+        {
+            Debug.Log(players[i].name);
+        }
+    }
+}
