@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Struct : MonoBehaviour
 {
-
     // struct
     struct HumanData // 구조체 내의 값은 여러 자료형을 사용 가능하다.
     {
