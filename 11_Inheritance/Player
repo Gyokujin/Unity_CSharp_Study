@@ -1,0 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Player : MonoBehaviour
+{
+    void Start()
+    {
+        Inheritance player = new Inheritance();
+        player.name = "Gandalf"; // 상속된 클래스이기 때문에 Character의 변수도 사용 가능하다.
+        player.hp = 80;
+        player.mp = 20;
+
+        Debug.Log(player.name);
+        Debug.Log(player.hp);
+        Debug.Log(player.mp);
+
+        player.UseMagic();
+        Debug.Log(player.mp);
+
+        player.Hit(20); // 부모 클래스의 함수 또한 사용 가능하다.
+        Debug.Log(player.hp);
+
+        Character magician = player; // 자식 클래스를 다시 부모 클래스로 바꿀수 있다. 단, 자식 클래스의 모든 값은 없어진다.
+        Debug.Log(magician is Character); // is로 클래스가 맞는지 확인 가능하다. 단, 부모 클래스인지 자식 클래스인지는 구별이 불가능하다.
+
+        Character newCha = new Character();
+
+        Inheritance sorceress = newCha as Inheritance; // as로 상속으로 클래스 변환이 가능하면 해당 클래스로 변환 불가능하면 Null 반환한다.
+        Debug.Log(sorceress is Inheritance);
+    }
+}
