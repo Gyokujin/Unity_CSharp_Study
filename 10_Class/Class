@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Class : MonoBehaviour
 {
+
     void Start()
     {
         Character cha = new Character("Eva", 100);
