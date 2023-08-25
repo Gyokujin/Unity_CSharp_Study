@@ -1,0 +1,54 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Enum : MonoBehaviour
+{
+    // enum
+    enum ProjectileKind
+    {
+        Arrow, // 미리 값을 넣지 않은 경우는 0부터 순차적으로 값을 갖는다.
+        Bullet, // 1
+        Missile // 2
+    }
+
+    enum Damage
+    {
+        RangeAttack = 2,
+        MeleeAttack = 5,
+        DashAttack, // 값을 입력하지 않으면 이전의 값에서 1을 더한값이 된다.
+        Magic = 10
+    }
+
+    void Start()
+    {
+        ProjectileKind kind;
+
+        kind = ProjectileKind.Arrow;
+        Debug.Log(kind);
+
+        switch (kind) // enum과 switch를 같이 사용하는 경우가 많다.
+        {
+            case ProjectileKind.Arrow:
+                Debug.Log("화살입니다.");
+                break;
+            case ProjectileKind.Bullet:
+                Debug.Log("총알입니다.");
+                break;
+            case ProjectileKind.Missile:
+                Debug.Log("미사일입니다.");
+                break;
+        }
+
+        Debug.Log((int)kind);
+
+        kind = (ProjectileKind)2; // enum의 값들은 고유의 정수값을 가지고 있기 때문에 int로 변환이 가능하다.
+        Debug.Log(kind);
+
+        Damage damage= Damage.DashAttack;
+        Debug.Log((int)damage);
+
+        damage = (Damage)10;
+        Debug.Log(damage);
+    }
+}
