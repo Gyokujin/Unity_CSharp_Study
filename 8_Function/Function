@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Function : MonoBehaviour
 {
+
     void Start()
     {
         Debug.Log(Square(10));
