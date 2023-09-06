@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Encapsulation : MonoBehaviour
 {
-
     // public : 공개. 외부에서도 접근 가능하다.
     // private : 비공개. 외부에서 접근 불가능하다.(C#에서는 디폴트로 private)
     // protected : private과 유사하지만 상속받은 자식 클래스에서는 접근 가능하다.
