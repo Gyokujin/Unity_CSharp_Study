@@ -1,0 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Get : MonoBehaviour
+{
+    void Start()
+    {
+        GetSet getset = new GetSet();
+        getset.HP = 10;
+    }
+}
