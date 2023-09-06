@@ -1,0 +1,24 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GetSet : MonoBehaviour
+{
+    // getter : 값을 얻는 곳
+    // setter : 값을 넣는 곳
+
+    private int hp; // 외부에서 사용할 HP와 입력 받고 저장할 값은 hp로 지정한다.
+
+    public int HP
+    {
+        get
+        { // 값을 받아듣일 때의 세부사항을 추가할 수 있다.
+            return hp;
+        }
+
+        set
+        { // 값을 저장할 때의 세부사항을 추가할 수 있다.
+            hp = value;
+        }
+    }
+}
