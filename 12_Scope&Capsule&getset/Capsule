@@ -1,0 +1,17 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Capsule : Encapsulation
+{
+    void Start()
+    {
+        Encapsulation capsule = new Encapsulation();
+        capsule.hp += 10; // public으로 선언되어서 외부에서 접근 가능하다.
+        mp = 10; // protected라서 접근 가능하다.
+        Debug.Log(mp);
+
+        GetSet get = new GetSet();
+        int hp = get.HP;
+    }
+}
