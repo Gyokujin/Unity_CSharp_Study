@@ -1,0 +1,17 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Overload : MonoBehaviour
+{
+    // overload : 같은 이름의 함수에 여러 기능을 싣는다.
+
+    void Start()
+    {
+        Box aBox = new Box();
+
+        aBox.Dump("휴지");
+        aBox.Dump("철수", "휴지"); // 함수의 이름이 같아도 파라미터가 다르면 별도의 함수로 구분한다.
+        aBox.Dump(1);
+    }
+}
