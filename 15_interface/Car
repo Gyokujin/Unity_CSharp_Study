@@ -1,0 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Car : Animal, ITurnOnable // 부모 클래스는 Animal이며 ITurnOnable은 interface이다.(interface는 여러개를 가질수 있다.)
+{
+    // interface를 상속 받았기 때문에 interface에서 이름만 선언한 함수는 모두 직접 선언해야 한다.
+
+    public void TurnOn() // 이름은 같게, 내용까지 작성이 필요하다.
+    {
+        Debug.Log("자동차의 시동을 켠다.");
+    }
+
+    public void TurnOff()
+    {
+        Debug.Log("자동차의 시동을 끈다.");
+    }
+
+    public override void Fly()
+    {
+        Debug.Log("변신!");
+    }
+}
