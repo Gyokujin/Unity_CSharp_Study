@@ -1,0 +1,9 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public interface ITurnOnable // 클래스에 interface를 선언해야 한다. interface는 이름 앞에 "I"를 붙이는 관습이 있다. 
+{
+    public void TurnOn(); // interface의 클래스이기 때문에 함수의 내용없이 이름만 선언이 가능하다 
+    public void TurnOff();
+}
