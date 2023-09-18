@@ -1,0 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class TV : ITurnOnable
+{
+    // interface를 상속 받았기 때문에 interface에서 이름만 선언한 함수는 모두 직접 선언해야 한다.
+
+    public void TurnOn() // 이름은 같게, 내용까지 작성이 필요하다.
+    {
+        Debug.Log("TV를 켠다.");
+    }
+
+    public void TurnOff()
+    {
+        Debug.Log("TV를 끈다.");
+    }
+}
