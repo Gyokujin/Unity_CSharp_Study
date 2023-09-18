@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public abstract class Animal // abstract 함수를 사용하기 위해서는 부모 클래스에도 abstract 선언을 해야한다.
 {
     public abstract void Fly(); // abstract 함수는 이름만 선언하고 기능은 구현하지 않는다.
