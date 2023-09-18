@@ -1,0 +1,11 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Bird : Animal
+{
+    public override void Fly() // 부모 클래스가 추상 클래스이기 때문에 abstract 선언을 한 함수는 전부 override 해야 정상 작동이 가능하다.
+    {
+        Debug.Log("퍼덕퍼덕");
+    }
+}
