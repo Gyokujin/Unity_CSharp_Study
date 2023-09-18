@@ -1,0 +1,19 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Override : MonoBehaviour
+{
+    // override : 상속을 받은 자식 클래스의 메소드가 부모 클래스의 메소드를 덮어써서 대체한다.
+
+    void Start()
+    {
+        Box aBox = new Box();
+
+        aBox.Introduce();
+
+        TrashBin trashbin = new TrashBin();
+
+        trashbin.Introduce(); // override 함수이기 때문에 TrashBin에서의 Introduce 함수가 실행된다.
+    }
+}
