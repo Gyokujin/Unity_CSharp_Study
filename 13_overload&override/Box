@@ -1,0 +1,26 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Box
+{
+    public virtual void Introduce() // virtual을 선언하면 상속받은 클래스가 해당 함수에 override가 가능해진다.
+    {
+        Debug.Log("안녕하세요 박스입니다.");
+    }
+
+    public void Dump(string thing) // 매개변수를 추가로 입력하지 않았을경우 기본값을 반환하는 식으로 만드는게 일반적이다.
+    {
+        Dump("아무나", thing);
+    }
+
+    public void Dump(string who, string thing)
+    {
+        Debug.Log(who + "씨" + thing + "좀 버려줘요.");
+    }
+
+    public void Dump(int number)
+    {
+        Debug.Log(number + "개 버렸습니다.");
+    }
+}
